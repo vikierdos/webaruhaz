@@ -21,7 +21,7 @@ main{
     "ar as"
     "f f";
     background-color: #113B51;
-    color: #4B966E
+    color: #4B966E;
 }
 article{
     display:grid;
@@ -32,6 +32,7 @@ article{
 header{
     grid-area: h;
     background-color: #003C1C;
+    text-align: center;
 }
 nav{
     grid-area: n;
@@ -57,6 +58,7 @@ article{
 }
 aside{
     grid-area: as;
+    padding: 5pt;
 }
 footer{
     grid-area: f;
@@ -127,5 +129,10 @@ aside{
     }
     body{
         width: 100%;
+    }
+    nav>ul{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
     }
 }
