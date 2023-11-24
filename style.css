@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    background-color: #032436;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+    "h h"
+    "n n"
+    "ar as"
+    "f f";
+    background-color: #113B51;
+    color: #4B966E
+}
+article{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    padding:10px;
+}
+header{
+    grid-area: h;
+    background-color: #003C1C;
+}
+nav{
+    grid-area: n;
+}
+nav>ul{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    background-color: #003C1C;
+}
+nav>ul>li{
+    list-style-type: none;
+    background-color: #003C1C;
+    text-align: center;
+    margin: 0px 5px;
+    padding: 5px 0px;
+}
+nav>ul>li>a{
+    text-decoration: none;
+    color: #7D82B0;
+}
+article{
+    grid-area: ar;
+}
+aside{
+    grid-area: as;
+}
+footer{
+    grid-area: f;
+}
+img{
+    width: 100%;
+}
+div.termek{
+    padding: 5pt;
+    border: 1px solid #080D3B;
+    border-radius: 5px;
+    background-color: #191F58;
+    display: grid;
+    grid-template-rows: 50px auto auto auto;
+
+}
+div.termek>h2{
+    font-size: 20px;
+}
+div.kep, div.lablec{
+    padding:0;
+    border: none;
+}
+div.lablec{
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+button{
+    background-color: #535993;
+}
+
+aside{
+    display: grid;
+    grid-template-rows: 50px auto auto 30px;
+}
+.tartalma{
+    display:grid;
+    grid-template-columns: 2fr 1fr auto;
+    border-bottom: 1px solid #4B966E;
+}
+.torles{
+    background-color:aliceblue;
+    color: red;
+    height: 20px;
+    width: 20px;
+}
+.osszesen{
+    text-align: center;
+}
+
+@media screen and (max-width:800px) {
+    article{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:500px) {
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "h"
+        "n"
+        "as"
+        "ar"
+        "f";
+    }
+    body{
+        width: 100%;
+    }
+}
